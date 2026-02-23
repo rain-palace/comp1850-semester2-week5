@@ -31,7 +31,7 @@
  
 #include <stdio.h>
 
-int main(void) {
+int main(void){
     int choice;
     double amount, converted;
 
@@ -54,8 +54,22 @@ int main(void) {
     scanf("%lf", &amount);
 
 	// Complete your code here
-    switch (choice) {
-        case :
+    switch (choice){
+        case 1:
+            converted=amount*USD_TO_EUR;
+            printf("converted amount: %.2lf eur\n", converted);
+            break;
+        case 2:
+            converted=amount*EUR_TO_USD;
+            printf("converted amount: %.2lf usd\n", converted);
+            break;
+        case 3:
+            converted=amount*USD_TO_GBP;
+            printf("converted amount: %.2lf gbp\n", converted);
+            break;
+        case 4:
+            converted=amount*GBP_TO_USD;
+            printf("converted amount: %.2lf usd\n", converted);
             break;
         default:
             printf("Invalid option\n");

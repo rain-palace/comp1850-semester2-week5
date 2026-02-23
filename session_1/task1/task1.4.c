@@ -17,7 +17,7 @@
  
 #include <stdio.h>
 
-int main(void) {
+int main(void){
 	float order_amount;
 	int is_premium;
 	int is_blacklisted;
@@ -31,7 +31,12 @@ int main(void) {
 	printf("Is customer blacklisted? (1 = Yes, 0 = No): ");
     scanf("%d", &is_blacklisted);
 	
-	// Complete the rest of the code
+	if((order_amount>100 || is_premium==1) && is_blacklisted==0){
+        printf("discount applied\n");
+    }
+    else{
+        printf("no discount\n");
+    }
 
 	return 0;
 }

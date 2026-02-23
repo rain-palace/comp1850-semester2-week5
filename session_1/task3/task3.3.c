@@ -71,7 +71,10 @@ int main(void) {
     scanf("%d", &credit_score);
 
     /* subtask1: Age eligibility check */
-	// Complete your code here
+	if(!(21<age<80)){
+        printf("loan rejected, age criteria not met");
+        return 1;
+    }
 
 
 

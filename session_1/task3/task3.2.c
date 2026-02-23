@@ -40,7 +40,7 @@
  
  #include <stdio.h>
 
-int main(void) {
+int main(void){
     int violation_type;
     int repeat_offense;
     float fine = 0.0;
@@ -53,10 +53,16 @@ int main(void) {
 
     /* subtask 1: Determine base fine using switch */
 	// Complete your code here
-    switch (violation_type) {
+    switch(violation_type){
         case 1:
+            fine=100;
             break;
-
+        case 2:
+            fine=150;
+            break;
+        case 3:
+            fine=50;
+            break;
         default:
             printf("Invalid violation type\n");
             return 1;
@@ -65,8 +71,8 @@ int main(void) {
     /* subtask 2: Apply repeat offense penalty */
 	// Complete your code here
 	
-	if (repeat_offense == 1) {
-		// todo
+	if(repeat_offense==1){
+		fine*=2;
 	}
 
     /* Output final fine */
