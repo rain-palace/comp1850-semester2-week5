@@ -22,6 +22,10 @@ int main(void) {
     // Use an appropriate loop structure
     
         printf("Enter temperature with scale (e.g., 23.5C or 75F): ");
+        fgets(input, sizeof(input), stdin);
+        while(39){
+            continue;
+        }
         
         // TODO: Use fgets to read the input
         

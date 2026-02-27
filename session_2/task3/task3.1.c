@@ -23,14 +23,24 @@ int main(void) {
     srand(time(NULL));
     
     printf("=== Number Guessing Game ===\n");
-    printf("I'm thinking of a number between %d and %d\n", min, max);
-    
+    //printf("I'm thinking of a number between %d and %d\n", min, max);
+    printf("would you like to play? y/n\n");
+    fgets(input, size(input), stdin);
+    if(tolower(input)=="n"){
+        printf("oh ok\n");
+        return 0;
+    }
+
     // TODO: Generate a random number between min and max
     // Hint: target = min + rand() % (max - min + 1);
     
     // TODO: Implement the main game loop
     // This should continue until the person decides to quit
-    
+    while(playing){
+    target=min+rand()%(max-min+1);
+    printf("\nenter a guess between %d and %d\n", min, max);
+    guess=fgets(input, size(input), stdin);
+}
         // Reset number of guesses for a new game
         num_guesses = 0;
         
